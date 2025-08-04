@@ -30,7 +30,7 @@ export const links = [
   {
     href: "#",
     icon: FaCalendarAlt,
-    text: "Kanban",
+    text: "try",
     badge: {
       text: "Pro",
       color: "bg-gray-100 text-gray-800",

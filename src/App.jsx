@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import Header from "./components/header/header"
-import Sidebar from './components/siderbar/sidebar'
+import Sidebar from './components/siderbar/Sidebar'
 
 
 
@@ -31,6 +31,7 @@ setSidebarOpen(!isSidebarOpen)
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Header  toggleSidebar={toggleSidebar} DarkMode={DarkMode} toggleDarkMode={toggleDarkMode}/>
         <Sidebar isSidebarOpen={isSidebarOpen}/>
+   
       </div>
     </>
   )
