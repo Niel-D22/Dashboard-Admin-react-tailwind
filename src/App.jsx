@@ -2,11 +2,13 @@ import { useState,useEffect } from 'react'
 import Header from "./components/header/header"
 import Sidebar from './components/siderbar/sidebar'
 
-import './App.css'
+
 
 function App() {
 
   const [DarkMode, setDarkMode] = useState(false);
+  const [isSidebarOpen,setSidebarOpen]=useState(false)
+  
 
   useEffect(() => {
     if (DarkMode) {
@@ -17,17 +19,18 @@ function App() {
   }, [DarkMode]);
 
  function toggleDarkMode() {
-  setDarkMode(prev => {
-    console.log("Sebelumnya:", prev, "-> Jadi:", !prev);
-    return !prev;
-  });
-}
+    setDarkMode((prevMode) => !prevMode);
+  }
+
+  const toggleSidebar=()=>{
+setSidebarOpen(!isSidebarOpen)
+  }
 
   return (
     <>
-      <div className='dark:bg-gray-500'>
-        <Header DarkMode={DarkMode} toggleDarkMode={toggleDarkMode}/>
-        <Sidebar/>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+        <Header  toggleSidebar={toggleSidebar} DarkMode={DarkMode} toggleDarkMode={toggleDarkMode}/>
+        <Sidebar isSidebarOpen={isSidebarOpen}/>
       </div>
     </>
   )
