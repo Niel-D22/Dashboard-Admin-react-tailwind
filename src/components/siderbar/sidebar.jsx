@@ -12,9 +12,10 @@ const sidebar = (isSidebarOpen) => {
       <div className="h-full px-3 pb-4 overflow-y-auto">
         <ul className="space-y-2 font-medium">
          {
-          links.map((link, map)=>{
+          links.map((link, index)=>{
+            return(
             <LinkItem key={index}{...link} />
-          })
+         ) })
          }
         </ul>
       </div>
