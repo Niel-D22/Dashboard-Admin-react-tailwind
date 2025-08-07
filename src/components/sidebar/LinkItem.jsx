@@ -1,6 +1,6 @@
 import React from "react";
 
-const LinkItem = ({ href, icon: Icon, text, badge }) => {
+const LinkItem = ({ href, icon:Icon, text, badge }) => {
   return (
     <li>
       <a
