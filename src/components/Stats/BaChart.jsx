@@ -96,7 +96,7 @@ const chartConfig = {
 
 
   return (
-    <div className=" px- mt-2">
+    <div data-aos="fade" data-aos-duration="3500" className=" px- mt-2">
       <Chart options={chartConfig.options}
       series={chartConfig.series} type="bar"
       height={280}

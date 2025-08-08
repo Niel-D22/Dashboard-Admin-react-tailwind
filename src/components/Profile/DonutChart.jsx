@@ -43,7 +43,7 @@ const options = {
 
 
   return (
-    <div className=' bg-white rounded-lg  p-5 flex dark:bg-gray-600 h-full items-center justify-center'>
+    <div data-aos="fade-left" data-aos-duration="2500"  className=' bg-white rounded-lg  p-5 flex dark:bg-gray-600 h-full items-center justify-center'>
         <Chart options={options.options} series={options.series}
         type="donut"height={200} />
     </div>

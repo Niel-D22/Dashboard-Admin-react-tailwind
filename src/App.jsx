@@ -8,8 +8,20 @@ import Stats from "./components/Stats/Stats";
 import Profile from "./components/Profile/Profile";
 import Team from "./components/Team/Team";
 import Event from "./components/Event/Event";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, 
+      once: true, 
+    });
+  }, []);
+
+
+
+
   const [DarkMode, setDarkMode] = useState(false);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
@@ -48,7 +60,7 @@ function App() {
             <Content>
               <Stats DarkMode={DarkMode} />
            <div className="flex sm:flex-row flex-col gap-4">
-              <Team />
+              <Team  />
               <Event />
               </div>
             </Content>

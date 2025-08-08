@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ data }) => {
   return (
-    <div className="bg-white p-4  rounded-2xl flex flex-rowl flex-1  items-start sm:items-center gap-2 sm:gap-4 dark:bg-gray-600 dark:text-gray-300 w-full ">
+    <div data-aos="fade-" data-aos-duration="1000" className="bg-white p-4  rounded-2xl flex flex-rowl flex-1  items-start sm:items-center gap-2 sm:gap-4 dark:bg-gray-600 dark:text-gray-300 w-full ">
       
       <span
         className={`

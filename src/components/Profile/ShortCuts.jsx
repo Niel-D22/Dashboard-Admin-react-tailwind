@@ -5,7 +5,7 @@ import { shortcutLink } from "../../constans";
 
 const ShortCuts = () => {
   return (
-    <div className="flex gap-4 flex-col bg-white rounded-lg p-4 dark:bg-gray-600">
+    <div data-aos="fade-left" data-aos-duration="1800"  className="flex gap-4 flex-col bg-white rounded-lg p-4 dark:bg-gray-600">
       <Title>Shortcurt</Title>
       {shortcutLink.map((list, index) => (
         <div key={index} className="flex justify-between cursor-pointer rounded-sm">
