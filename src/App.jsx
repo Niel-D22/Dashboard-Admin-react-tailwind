@@ -1,16 +1,16 @@
-import { useState,useEffect } from 'react'
-import Header from "./components/header/header"
-import Sidebar from "./components/sidebar/sidebar"
-import Hero from "./components/hero/hero"
-import Main from './Ui/Main';
-import Content from './Ui/Content'
-import Profile from './components/Profile/Profile';
+import { useState, useEffect } from "react";
+import Header from "./components/header/header";
+import Sidebar from "./components/sidebar/sidebar";
+
+import Main from "./Ui/Main";
+import Content from "./Ui/Content";
+import Stats from "./components/Stats/Stats";
+import Profile from "./components/Profile/Profile";
+import Team from "./components/Team/Team";
 
 function App() {
-
   const [DarkMode, setDarkMode] = useState(false);
-  const [isSidebarOpen,setSidebarOpen]=useState(false)
-  
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     if (DarkMode) {
@@ -20,26 +20,45 @@ function App() {
     }
   }, [DarkMode]);
 
- function toggleDarkMode() {
+  function toggleDarkMode() {
     setDarkMode((prevMode) => !prevMode);
   }
 
-  const toggleSidebar=()=>{
-setSidebarOpen(!isSidebarOpen)
-  }
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-        <Header  toggleSidebar={toggleSidebar} DarkMode={DarkMode} toggleDarkMode={toggleDarkMode}/>
-        <Sidebar isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen}/>
-    <Main>
-     <Content>Main content</Content>
-     <Profile></Profile>
-    </Main>
+      <div className="">
+        <Header
+          toggleSidebar={toggleSidebar}
+          DarkMode={DarkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
+        <div className="flex md:flex-row  flex-1">
+          <Sidebar
+            className=""
+            isSidebarOpen={isSidebarOpen}
+            setSidebarOpen={setSidebarOpen}
+          />
+          <Main isSidebarOpen={isSidebarOpen}>
+            {/* card dn grafik */}
+            <Content>
+              <Stats DarkMode={DarkMode} />
+            
+                <Team />
+              
+      
+            </Content>
+            {/* end */}
+
+            <Profile />
+          </Main>
+        </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

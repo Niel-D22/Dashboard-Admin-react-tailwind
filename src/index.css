@@ -4,16 +4,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 *{
-    @apply transition-colors duration-300
+    @apply transition-all  duration-300
 }
 .sidebar-base {
-  @apply fixed top-0 left-0 z-40 w-64 h-screen pt-20 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700 transition-transform duration-500 ease-in-out transform;
+  @apply fixed top-0 left-0 z-40 xl:w-64 w-50 h-screen pt-20 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700 transition-transform duration-500 ease-in-out transform ;
 }
 
 .sidebar-open {
-  @apply translate-x-0;
+  @apply translate-x-0 md:translate-x-0;
 }
 
 .sidebar-closed {
-  @apply -translate-x-full;
+  @apply -translate-x-full md:translate-x-0;
+}
+
+.main-jsx{
+    @apply transition-all
+ duration-300;
 }
