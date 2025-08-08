@@ -20,7 +20,7 @@ const Card = ({ data }) => {
         <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold">
           {data.count}
         </h2>
-        <p className="text-sm sm:text-base md:text-lg">{data.title}</p>
+        <p className="text-sm sm:text-base ">{data.title}</p>
       </div>
     </div>
   );

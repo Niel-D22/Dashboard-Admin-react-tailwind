@@ -75,7 +75,7 @@ export const empolyeesData  = [
   {
     title: "Total Projects",
     icon: FaProjectDiagram,
-    count: 8, // Misalnya kamu sudah buat 8 project
+    count: 16, // Misalnya kamu sudah buat 8 project
     bgColor: "bg-gray-100",
   },
   {

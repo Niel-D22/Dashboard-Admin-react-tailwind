@@ -2,7 +2,7 @@ import React from "react";
 
 const Member = ({ user }) => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between mt-5 items-center">
       <div className="flex items-center gap-3">
         <img
           src={user.image}

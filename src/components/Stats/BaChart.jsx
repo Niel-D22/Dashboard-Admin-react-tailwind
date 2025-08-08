@@ -2,11 +2,11 @@ import React from "react";
 import Chart from "react-apexcharts";
 
 const BaChart = ({ DarkMode }) => {
- const chartConfig = {
+const chartConfig = {
   series: [
     {
-      name: "Project Selesai",
-      data: [1, 2, 3, 4, 2, 3, 4, 2, 1], // jumlah project selesai per bulan
+      name: "Total Projects",
+      data: [1, 1, 2, 2, 3, 3, 2, 2], // total 16 project
     },
   ],
   options: {
@@ -18,19 +18,34 @@ const BaChart = ({ DarkMode }) => {
       },
     },
     title: {
-      show: false,
+      text: "Jumlah Project per Bulan",
+      align: "left",
+      style: {
+        fontSize: "16px",
+        fontWeight: 600,
+      },
     },
     dataLabels: {
       enabled: false,
     },
-    colors: ["#3b82f6"], // warna biru (Tailwind blue-500)
+    colors: ["#8b5cf6"],
     plotOptions: {
       bar: {
         columnWidth: "40%",
-        borderRadius: 4,
+        borderRadius: 2,
       },
     },
     xaxis: {
+      categories: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
       axisTicks: {
         show: false,
       },
@@ -45,9 +60,6 @@ const BaChart = ({ DarkMode }) => {
           fontWeight: 400,
         },
       },
-      categories: [
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"
-      ], // bulan
     },
     yaxis: {
       labels: {
@@ -84,10 +96,10 @@ const BaChart = ({ DarkMode }) => {
 
 
   return (
-    <div className="px-2 pb-0">
+    <div className=" px- mt-2">
       <Chart options={chartConfig.options}
       series={chartConfig.series} type="bar"
-      height={240}
+      height={280}
       />
     </div>
   );

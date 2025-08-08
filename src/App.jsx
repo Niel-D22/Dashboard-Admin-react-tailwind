@@ -47,7 +47,7 @@ function App() {
             {/* card dn grafik */}
             <Content>
               <Stats DarkMode={DarkMode} />
-           <div className="flex gap-4">
+           <div className="flex sm:flex-row flex-col gap-4">
               <Team />
               <Event />
               </div>
