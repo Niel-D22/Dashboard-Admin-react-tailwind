@@ -7,6 +7,7 @@ import Content from "./Ui/Content";
 import Stats from "./components/Stats/Stats";
 import Profile from "./components/Profile/Profile";
 import Team from "./components/Team/Team";
+import Event from "./components/Event/Event";
 
 function App() {
   const [DarkMode, setDarkMode] = useState(false);
@@ -46,10 +47,10 @@ function App() {
             {/* card dn grafik */}
             <Content>
               <Stats DarkMode={DarkMode} />
-            
-                <Team />
-              
-      
+           <div className="flex gap-4">
+              <Team />
+              <Event />
+              </div>
             </Content>
             {/* end */}
 

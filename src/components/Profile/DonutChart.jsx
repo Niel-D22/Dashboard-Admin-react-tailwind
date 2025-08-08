@@ -6,14 +6,14 @@ const DonutChart = ({DarkMode}) => {
 // data grafik,
 
 const options = {
-  series: [44, 55, 41],
+  series: [70, 20, 10], // total 100%
   options: {
     chart: {
       type: "donut",
       height: 350,
     },
-    labels: ["Desktop", "Tablet", "Mobile"],
-    colors: ["#FF5733", "#33FF57", "#3357FF"],
+    labels: ["Mahasiswa", "Admin", "Dosen"],
+    colors: ["#4ade80", "#60a5fa", "#f87171"],
     legend: {
       position: "bottom",
       labels: {
@@ -40,6 +40,7 @@ const options = {
     ],
   },
 };
+
   return (
     <div className=' bg-white rounded-lg  p-5 flex dark:bg-gray-600 h-full items-center justify-center'>
         <Chart options={options.options} series={options.series}

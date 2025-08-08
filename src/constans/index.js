@@ -1,5 +1,8 @@
 import { GoGoal } from "react-icons/go";
 import { GrPlan } from "react-icons/gr";
+import { FaProjectDiagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import {
   IoIosStats,
   IoIosSettings,
@@ -17,7 +20,7 @@ import {
   FaListAlt,
 } from "react-icons/fa";
 
-import user01 from "../assets/user01.png";
+import user01 from "../assets/nils.jpg";
 import user02 from "../assets/user02.png";
 import user03 from "../assets/user03.png";
 
@@ -68,24 +71,23 @@ export const links = [
     text: "Sign Up",
   },
 ];
-
-export const empolyeesData = [
+export const empolyeesData  = [ 
   {
-    title: "Total Empolyees",
-    icon: IoIosPerson,
-    count: 200,
+    title: "Total Projects",
+    icon: FaProjectDiagram,
+    count: 8, // Misalnya kamu sudah buat 8 project
     bgColor: "bg-gray-100",
   },
   {
-    title: "On Leave",
-    icon: IoIosEyeOff,
-    count: 15,
+    title: "GitHub Commits",
+    icon: FaGithub,
+    count: 113, // Jumlah commit (bisa diubah sesuai data asli kamu)
     bgColor: "bg-blue-100",
   },
   {
-    title: "New Joinee",
-    icon: IoIosPersonAdd,
-    count: 25,
+    title: "Languages Used",
+    icon: FaCode,
+    count: 2, // Misalnya kamu pakai HTML, CSS, JS, Node, React
     bgColor: "bg-yellow-100",
   },
 ];
@@ -111,65 +113,47 @@ export const shortcutLink = [
 
 export const users = [
   {
-    name: "Robert Fox",
-    country: "USA",
-    role: "Python Developer",
-    image: user01,
-    bgColor: "bg-yellow-100",
-  },
-  {
-    name: "Jane Doe",
-    country: "UK",
+    name: "Daniel R.W.",
+    country: "Indonesia",
     role: "Frontend Developer",
-    image: user02,
-    bgColor: "bg-blue-100",
-  },
-  {
-    name: "John Smith",
-    country: "Canada",
-    role: "Backend Developer",
-    image: user03,
-    bgColor: "bg-gray-100",
-  },
-  {
-    name: "Alice Johnson",
-    country: "Australia",
-    role: "Full Stack Developer",
-    image: user01,
-    bgColor: "bg-slate-100",
+    image: user01, // pastikan ini menunjuk ke foto kamu
+    bgColor: "bg-emerald-100",
   },
 ];
 
+
 export const events = [
   {
-    date: "01 Aug",
-    title: "Upcoming Event",
-    description: "Lorem ipsum dolor sit amet.",
+    date: "03 Jun",
+    title: "Game Suit",
+    description: "Suit game pakai Node.js & MySQL.",
   },
   {
-    date: "15 Sept",
-    title: "Annual Conference",
-    description: "Join us for our annual conference.",
+    date: "20 Jun",
+    title: "Absensi Online SPA",
+    description: "Absensi mahasiswa dengan fitur dashboard.",
   },
   {
-    date: "20 Sept",
-    title: "Networking Meetup",
-    description: "Connect with professionals in your field.",
+    date: "18 Mei",
+    title: "Dashboard Statistik",
+    description: "Tampilkan data user dengan chart dinamis.",
   },
 ];
+
+;
 
 // ------- ==
 // chart data, later we will use this!!!
 
 // const options = {
-//   series: [44, 55, 41],
+//   series: [70, 20, 10], // total 100%
 //   options: {
 //     chart: {
 //       type: "donut",
 //       height: 350,
 //     },
-//     labels: ["Desktop", "Tablet", "Mobile"],
-//     colors: ["#FF5733", "#33FF57", "#3357FF"],
+//     labels: ["Mahasiswa", "Admin", "Dosen"],
+//     colors: ["#4ade80", "#60a5fa", "#f87171"],
 //     legend: {
 //       position: "bottom",
 //       labels: {
@@ -196,6 +180,7 @@ export const events = [
 //     ],
 //   },
 // };
+// 
 
 // ..........
 // const chartConfig = {

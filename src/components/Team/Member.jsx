@@ -3,7 +3,7 @@ import React from "react";
 const Member = ({ user }) => {
   return (
     <div className="flex justify-between items-center">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-3">
         <img
           src={user.image}
           alt={user.name}
@@ -14,7 +14,8 @@ const Member = ({ user }) => {
             <span className="font-semibold text-gray-400 text-sm" >{user.country}</span>
         </div>
       </div>
-      <span className={`${user.bgColor} p-3`}>{user.role}</span>
+      <span className={`${user.bgColor} p-3 rounded-full text-xs
+      text-gray-700 font-semibold dark:bg-gray-500 dark:text-gray-300`}>{user.role}</span>
     </div>
   );
 };
