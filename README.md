@@ -1,1 +1,1 @@
-baru tampilan ui
+baru tampilan ui saja
