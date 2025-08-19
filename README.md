@@ -1,2 +1,2 @@
 baru tampilan ui saja
-belum interaktiv..
+belum interaktiv.
